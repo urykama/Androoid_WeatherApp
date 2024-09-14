@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.content.AsyncTaskLoader;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     private class GetURLData extends AsyncTask<String, String, String> {
 
         @Override
